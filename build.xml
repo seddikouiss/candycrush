@@ -12,7 +12,7 @@
 	
 	<target name="build">
 		<mkdir dir="${build.dir}"/>
-		<javac srcdir="${implementation.dir/src.dir}" destdir="${build.dir}" includeantruntime="false">
+		<javac srcdir="${implementation.dir}" destdir="${build.dir}" includeantruntime="false">
 			<classpath refid="JUnit"/>
 		</javac>
 		<echo message="Build done" />
@@ -25,7 +25,7 @@
 				<pathelement location="${build.dir}"/>
 			</classpath>
 			<batchtest>
-				<fileset dir="${implementation/src.dir}" includes="modele/test/*.java"/>
+				<fileset dir="${implementation.dir}" includes="src/modele/test/*.java"/>
 			</batchtest>
 		</junit>
 	</target>
