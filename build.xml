@@ -1,15 +1,12 @@
 <?xml version="1.0"?>
 <project name="java-junit-template-project" default="test" basedir=".">
 	<property name="src.dir" value="implementation/src/"/>
-	<property name="build.dir" value="build/"/>
-	
+	<property name="build.dir" value="build/"/>	
 	<path id="JUnit">
 		<pathelement location="implementation/JUnit/junit-4.11.jar"/>
 		<pathelement location="implementation/JUnit/hamcrest-core-1.3.jar"/>
-	</path>
-	
+	</path>	
 	<target name="test" depends="run, clean"/>
-	
 	<target name="build">
 		<mkdir dir="${build.dir}"/>
 		<javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
@@ -17,7 +14,6 @@
 		</javac>
 		<echo message="Build done" />
 	</target>
-
 	<target name="run" depends="build">
 		<junit printsummary="on" haltonfailure="yes">
 			<classpath>
@@ -28,8 +24,7 @@
 				<fileset dir="${src.dir}" includes="modele/test/*.java"/>
 			</batchtest>
 		</junit>
-	</target>
-	
+	</target>	
 	<target name="clean">
 		<delete dir="${build.dir}"/>
 		<echo message="clean done" />
