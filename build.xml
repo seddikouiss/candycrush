@@ -12,7 +12,7 @@
 	
 	<target name="build">
 		<mkdir dir="${build.dir}"/>
-		<javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+		<javac srcdir="${implementation.dir/src.dir}" destdir="${build.dir}" includeantruntime="false">
 			<classpath refid="JUnit"/>
 		</javac>
 		<echo message="Build done" />
